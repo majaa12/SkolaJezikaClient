@@ -35,9 +35,9 @@ public class PretragaPolaznikaController {
 				String ime = frmPretragaPolaznika.getTxtIme().getText().trim();
 				String prezime = frmPretragaPolaznika.getTxtPrezime().getText().trim();
 
-				Polaznik p = new Polaznik();
-				p.setIme(ime);
-				p.setPrezime(prezime);
+				Polaznik p = new Polaznik(-1, ime, prezime, null, null, null, null);
+				/*p.setIme(ime);
+				p.setPrezime(prezime);*/
 
 				try {
 					ArrayList<Polaznik> polaznici = Communication.getInstance().pretraziPolaznike(p);

@@ -42,11 +42,11 @@ public class PretragaKursevaController {
 				TipKursa tip = (TipKursa) frmPretragaKurseva.getCmbTipKursa().getSelectedItem();
 				Jezik jezik = (Jezik) frmPretragaKurseva.getCmbJezik().getSelectedItem();
 
-				Kurs k = new Kurs();
-				k.setNaziv(naziv);
+				Kurs k = new Kurs(-1, naziv, nivo, tip, jezik, null);
+				/*k.setNaziv(naziv);
 				k.setNivo(nivo);
 				k.setTipKursa(tip);
-				k.setJezik(jezik);
+				k.setJezik(jezik);*/
 
 				try {
 					ArrayList<Kurs> kursevi = Communication.getInstance().pretraziKurseve(k);

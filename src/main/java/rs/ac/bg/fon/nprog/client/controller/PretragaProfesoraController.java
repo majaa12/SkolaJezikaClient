@@ -39,10 +39,10 @@ public class PretragaProfesoraController {
 				String prezime = frmPretragaProfesora.getTxtPrezime().getText().trim();
 				Jezik jezik = (Jezik) frmPretragaProfesora.getCmbJezik().getSelectedItem();
 
-				Profesor p = new Profesor();
-				p.setIme(ime);
+				Profesor p = new Profesor(-1, ime, prezime, null, null, jezik);
+				/*p.setIme(ime);
 				p.setPrezime(prezime);
-				p.setJezik(jezik);
+				p.setJezik(jezik);*/
 
 				try {
 					ArrayList<Profesor> profesori = Communication.getInstance().pretraziProfesore(p);

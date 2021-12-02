@@ -49,20 +49,20 @@ public class PretragaUpisaController {
 				TipKursa tip = (TipKursa) frmPretragaUpisa.getCmbTip().getSelectedItem();
 				Jezik jezik = (Jezik) frmPretragaUpisa.getCmbJezik().getSelectedItem();
 
-				Kurs k = new Kurs();
-				k.setNaziv(naziv);
+				Kurs k = new Kurs(-1, naziv, nivo, tip, jezik, null);
+				/*k.setNaziv(naziv);
 				k.setNivo(nivo);
 				k.setTipKursa(tip);
-				k.setJezik(jezik);
+				k.setJezik(jezik);*/
 				TerminKursa t = new TerminKursa();
 				t.setKurs(k);
 
 				String ime = frmPretragaUpisa.getTxtIme().getText().trim();
 				String prezime = frmPretragaUpisa.getTxtPrezime().getText().trim();
 
-				Polaznik p = new Polaznik();
-				p.setIme(ime);
-				p.setPrezime(prezime);
+				Polaznik p = new Polaznik(-1, ime, prezime, null, null, null, null);
+				/*p.setIme(ime);
+				p.setPrezime(prezime);*/
 
 				Administrator a = (Administrator) MainCoordinator.getInstance().getParam(Constants.CURRENT_ADMIN);
 
